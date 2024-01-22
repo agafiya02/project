@@ -248,7 +248,7 @@ boombs = [load_image('regularExplosion01.png'),
           load_image('regularExplosion08.png')
           ]
 
-
+score = 0
 running = True
 while running:
 
