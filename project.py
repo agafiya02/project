@@ -2,7 +2,7 @@ import sys
 import random
 import pygame
 import os
-import time
+
 
 WIDTH = 600
 HEIGHT = 800
@@ -138,11 +138,12 @@ class Ship(pygame.sprite.Sprite):
 
 ship_image = load_image('ship.png')
 zlodei_image = load_image('zlodei.png')
-fon = pygame.transform.scale(load_image('fon1.png'), (WIDTH, HEIGHT))
 
+fon = pygame.transform.scale(load_image('fon1.png'), (WIDTH, HEIGHT))
 ship = Ship(244, 688, 50, 'ship.png', heroes)
 
 screen.blit(fon, (0, 0))
+
 all_sprites.add(ship)
 
 
@@ -247,12 +248,10 @@ boombs = [load_image('regularExplosion01.png'),
           load_image('regularExplosion08.png')
           ]
 
-score = 0
+
 running = True
-k = 0
 while running:
 
-    k += 1
     all_sprites.update()
 
     # проверка, не попала ли пуля в моб
